@@ -1,6 +1,6 @@
 # Vue Navigation UI
 
-###### Package only compatible with new vue releases (vue 3 | vitejs)
+###### Note: Package only compatible with new vue releases (vue 3 | vitejs)
 
 ## Installation
 ```
