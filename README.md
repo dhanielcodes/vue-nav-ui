@@ -1,5 +1,19 @@
 # Vue navigation UI
 
+## Installation
+```
+npm install vue-nav-ui
+```
+
+```vue
+import Nav from "vue-nav-ui";
+
+export default {
+  components: {
+    Nav
+  }
+}
+```
 ## Basic Usage
 ### Composition-api
 
