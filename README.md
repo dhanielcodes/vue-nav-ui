@@ -1,6 +1,7 @@
-# vue-nav-ui
+# Vue navigation UI
 
-## composition-api
+## Basic Usage
+### Composition-api
 
 ```vue
 <template>
@@ -66,7 +67,7 @@ export default {
 </script>
 ```
 
-## options-api
+### Options-api
 
 ```vue
 <template>
