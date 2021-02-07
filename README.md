@@ -1,5 +1,7 @@
 # Vue Navigation UI
 
+###### Package only compatible with new vue releases (vue 3 | vitejs)
+
 ## Installation
 ```
 npm install vue-nav-ui
