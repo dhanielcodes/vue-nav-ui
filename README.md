@@ -1,4 +1,4 @@
-# Vue navigation UI
+# Vue Navigation UI
 
 ## Installation
 ```
@@ -14,7 +14,7 @@ export default {
   }
 }
 ```
-## Basic Usage
+## Basic Usage Configuration
 ### Composition-api
 
 ```vue
