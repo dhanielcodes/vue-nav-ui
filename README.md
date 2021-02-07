@@ -1,4 +1,144 @@
-# dhaniel-component-pack
+# vue-nav-ui
+
+## composition-api
+
+```javascript
+<template>
+  <div>
+    <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
+      <img class="img" src="../assets/logo.png" alt="" srcset="" />
+    </Nav>
+  </div>
+</template>
+
+<script>
+import Nav from "vue-nav-ui";
+
+export default {
+  components: {
+    Nav,
+  },
+  setup() {
+    const navLinks = ref([
+      {
+        name: "Home",
+        path: "/",
+      },
+      {
+        name: "About",
+        path: "/about",
+      },
+      {
+        name: "FAQs",
+        path: "/faqs",
+      },
+      {
+        name: "More",
+        path: "/more",
+      },
+      {
+        name: "Media",
+        path: "/media",
+      },
+    ]);
+    const navConfig = ref({
+      whitespace: true,
+      navBg: "#FAFAFA",
+      navBorderRadius: "30px",
+      linkFont: "poppins",
+      linkColor: "black",
+    });
+
+    const btnConfig = ref({
+      btnLink: true,
+      btnUrl: "https://dhaniel.disha.page",
+      btnText: "Download app",
+      btnBg: "#40269E",
+      btnTextColor: "white",
+      btnBorderWidth: "0",
+      btnBorderColor: "black",
+      btnBorderRadius: "20px",
+    });
+
+    return { navLinks, btnConfig, navConfig };
+  },
+};
+</script>
+```
+
+## options-api
+
+```javascript
+<template>
+  <div>
+    <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
+      <img class="img" src="../assets/logo.png" alt="" srcset="" />
+    </Nav>
+  </div>
+</template>
+
+<script>
+import Nav from "vue-nav-ui";
+
+export default {
+  components: {
+    Nav,
+  },
+  data(){
+        return {
+            navLinks: [
+                {
+                    name: "Home",
+                    path: "/",
+                },
+                {
+                    name: "About",
+                    path: "/about",
+                },
+                {
+                    name: "FAQs",
+                    path: "/faqs",
+                },
+                {
+                    name: "More",
+                    path: "/more",
+                },
+                {
+                    name: "Media",
+                    path: "/media",
+                },
+            ],
+            navConfig: {
+                whitespace: true,
+                navBg: "#FAFAFA",
+                navBorderRadius: "30px",
+                linkFont: "poppins",
+                linkColor: "black",
+            },
+            btnConfig: {
+                btnLink: true,
+                btnUrl: "https://dhaniel.disha.page",
+                btnText: "Download app",
+                btnBg: "#40269E",
+                btnTextColor: "white",
+                btnBorderWidth: "0",
+                btnBorderColor: "black",
+                btnBorderRadius: "20px",
+            }
+        }
+    }
+};
+</script>
+```
+
+
+
+
+
+
+
+
+
 
 ## Project setup
 ```

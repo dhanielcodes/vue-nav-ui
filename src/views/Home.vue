@@ -1,17 +1,77 @@
 <template>
   <div class="home">
-    <Nav />
+    <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
+      <img class="img" src="../assets/logo.png" alt="" srcset="" />
+      <template #btnAppend>
+        <img class="img" src="../assets/logo.png" alt="" srcset="" />
+      </template>
+    </Nav>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { Nav } from "@/components";
+import { defineComponent, ref } from "vue";
+import Nav from "@/components/Nav.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     Nav,
   },
+  setup() {
+    const navLinks = ref([
+      {
+        name: "Home",
+        path: "/",
+      },
+      {
+        name: "About",
+        path: "/about",
+      },
+      {
+        name: "FAQs",
+        path: "/faqs",
+      },
+      {
+        name: "More",
+        path: "/more",
+      },
+      {
+        name: "Media",
+        path: "/media",
+      },
+    ]);
+    const navConfig = ref({
+      whitespace: true,
+      navBg: "#FAFAFA",
+      navBorderRadius: "30px",
+      linkFont: "poppins",
+      linkColor: "black",
+    });
+
+    const btnConfig = ref({
+      btnLink: true,
+      btnUrl: "https://dhaniel.disha.page",
+      btnText: "Download app",
+      btnBg: "#40269E",
+      btnTextColor: "white",
+      btnBorderWidth: "0",
+      btnBorderColor: "black",
+      btnBorderRadius: "20px",
+    });
+
+    return { navLinks, btnConfig, navConfig };
+  },
 });
 </script>
+<style scoped>
+.home {
+  height: 100vh;
+}
+.img {
+  width: 30px;
+}
+.btnImg {
+  width: 100%;
+}
+</style>
