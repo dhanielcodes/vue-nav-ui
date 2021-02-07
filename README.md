@@ -2,7 +2,7 @@
 
 ## composition-api
 
-```javascript
+```vue
 <template>
   <div>
     <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
@@ -68,7 +68,7 @@ export default {
 
 ## options-api
 
-```javascript
+```vue
 <template>
   <div>
     <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
