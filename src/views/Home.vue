@@ -1,22 +1,22 @@
 <template>
   <div class="home">
-    <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
+    <VueNavUI :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
       <img class="img" src="../assets/logo.png" alt="" srcset="" />
       <template #btnAppend>
         <img class="img" src="../assets/logo.png" alt="" srcset="" />
       </template>
-    </Nav>
+    </VueNavUI>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import Nav from "@/components/Nav.vue";
+import VueNavUI from "vue-nav-ui";
 
 export default defineComponent({
   name: "Home",
   components: {
-    Nav,
+    VueNavUI,
   },
   setup() {
     const navLinks = ref([
