@@ -1,3 +1,4 @@
+<img src="https://res.cloudinary.com/devdaniel/image/upload/v1612899979/Frame_12_xohomk.png"/>
 # Vue Navigation UI
 
 ###### Note: Package only compatible with new vue releases (vue 3 | vitejs)
