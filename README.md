@@ -69,6 +69,7 @@ export default {
       navBorderRadius: "30px", /* BORDER RADIUS OF YOUR NAV */
       linkFont: "poppins", /* FONT FAMILY OF YOUR NAV */
       linkColor: "black", /* FONT COLOR OF YOUR NAV */
+      responsivePosition: "top or bottom", /* FOR CHANGING THE POSITION OF YOUR NAV WHEN RESPONSIVE. BOTTOM or TOP | The only two options */
     });
 
      /* FOR NAV BUTTON CONFIGURATION */
@@ -138,6 +139,7 @@ export default {
                 navBorderRadius: "30px", /* BORDER RADIUS OF YOUR NAV */
                 linkFont: "poppins", /* FONT FAMILY OF YOUR NAV */
                 linkColor: "black", /* FONT COLOR OF YOUR NAV */
+                responsivePosition: "top or bottom", /* FOR CHANGING THE POSITION OF YOUR NAV WHEN RESPONSIVE. BOTTOM or TOP | The only two options */
             },
             btnConfig: {
                 btnLink: true, /* FOR INITIALIZING NAV BUTTON USAGE, IF SET TO FALSE, REMOVES THE NAV BUTTON  */
@@ -154,6 +156,48 @@ export default {
 };
 </script>
 ```
+
+## Responsive Position
+
+### Top position
+
+```vue
+navConfig: {
+    //
+    responsivePosition: "top",
+}
+```
+
+<img src="https://res.cloudinary.com/devdaniel/image/upload/v1612909704/e_kmc4u8.png"/>
+
+
+### Bottom position
+
+```vue
+navConfig: {
+    //
+    responsivePosition: "bottom",
+}
+```
+
+<img src="https://res.cloudinary.com/devdaniel/image/upload/v1612909709/ee_j6clb3.png"/>
+
+
+# Add icon to nav button
+
+```vue
+//Adds icon after the text
+<template #btnAppend>
+        <img class="img" src="icon" alt="" srcset="" />
+</template>
+
+
+
+//Adds icon after the text
+<template #btnPrepend>
+        <img class="img" src="icon" alt="" srcset="" />
+</template>
+````
 
 
 # FEEL FREE TO CONTRIBUTE : )

@@ -1,8 +1,15 @@
 <template>
-  <div :class="{ container: navConfig.whitespace }">
+  <div :class="{ container: navConfig.whitespace, open: open }">
     <div class="nav">
       <slot></slot>
-      <div class="links" :class="{ open: open }">
+      <div
+        class="links"
+        :class="{
+          open: open,
+          bottom: navConfig.responsivePosition == 'bottom',
+          top: navConfig.responsivePosition == 'top',
+        }"
+      >
         <router-link
           class="link"
           v-for="(navName, idx) in navLinks"
@@ -55,6 +62,7 @@
       </a>
     </div>
   </div>
+  <div class="excess"></div>
 </template>
 
 <script lang="ts">
@@ -85,6 +93,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.excess {
+  height: 122px;
+  width: 100%;
+  display: none;
+}
 .container {
   padding: 20px;
 }
@@ -140,8 +153,22 @@ button p {
   display: none;
 }
 @media (max-width: 790px) {
+  .excess {
+    display: block;
+  }
   .container {
     height: 100vh;
+    position: fixed;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s;
+  }
+  .container.open {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.337);
+    backdrop-filter: blur(4px);
   }
   .toggle {
     display: block;
@@ -152,6 +179,7 @@ button p {
     height: 50px;
     cursor: pointer;
     transform: rotate(0deg);
+    pointer-events: all;
     transition: all 0.3s;
   }
   .toggle svg {
@@ -167,9 +195,8 @@ button p {
     justify-content: space-between;
   }
   .links {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    top: 0;
     background: v-bind("navConfig.navBg");
     display: flex;
     flex-direction: column;
@@ -186,6 +213,13 @@ button p {
     opacity: 1;
     transform: translateY(0px) translateX(-50%);
     pointer-events: all;
+  }
+  .links.bottom {
+    bottom: 0;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .links.top {
+    top: 40px;
   }
   .links .link {
     margin: 15px 0;

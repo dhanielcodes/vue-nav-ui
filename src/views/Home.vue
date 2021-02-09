@@ -1,22 +1,25 @@
 <template>
   <div class="home">
-    <VueNavUI :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
+    <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
       <img class="img" src="../assets/logo.png" alt="" srcset="" />
       <template #btnAppend>
         <img class="img" src="../assets/logo.png" alt="" srcset="" />
       </template>
-    </VueNavUI>
+    </Nav>
+    <h1>Hello</h1>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import VueNavUI from "vue-nav-ui";
+//import VueNavUI from "vue-nav-ui";
+import { Nav } from "../components";
 
 export default defineComponent({
   name: "Home",
   components: {
-    VueNavUI,
+    //VueNavUI,
+    Nav,
   },
   setup() {
     const navLinks = ref([
@@ -47,6 +50,7 @@ export default defineComponent({
       navBorderRadius: "30px",
       linkFont: "poppins",
       linkColor: "black",
+      responsivePosition: "top",
     });
 
     const btnConfig = ref({
