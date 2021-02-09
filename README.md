@@ -186,7 +186,7 @@ navConfig: {
 # Add icon to nav button
 
 ```vue
-//Adds icon after the text
+//Adds icon before the text
 <template #btnAppend>
         <img class="img" src="icon" alt="" srcset="" />
 </template>

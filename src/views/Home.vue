@@ -2,7 +2,7 @@
   <div class="home">
     <Nav :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
       <img class="img" src="../assets/logo.png" alt="" srcset="" />
-      <template #btnAppend>
+      <template #btnPrepend>
         <img class="img" src="../assets/logo.png" alt="" srcset="" />
       </template>
     </Nav>
