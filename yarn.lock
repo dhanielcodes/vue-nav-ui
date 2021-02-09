@@ -8517,10 +8517,10 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-nav-ui@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/vue-nav-ui/-/vue-nav-ui-1.0.2.tgz#61d1813711a240b014e8691a487254aab2ac2d35"
-  integrity sha512-xQXF6kfigTWf1OGMwxYkvaT7pmTBLGoRhK/YUkE13Auz9Tgj4i3l8HcjykuoIynf/lG5zQ2lbivBcYL1eHkGNA==
+vue-nav-ui@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vue-nav-ui/-/vue-nav-ui-1.0.5.tgz#591564933e24a02a9d26360a15cac0f238559356"
+  integrity sha512-mE5R16sGljkJ7bzJVquH19GqFhSGOwdw/X1iX4LktjUZfiCEVSenlTNQrcjE9FKcy3VJvNv8m8G90+/Ajoy4Lw==
 
 vue-router@^4.0.0-0:
   version "4.0.3"

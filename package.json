@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
-    "vue-nav-ui": "^1.0.2",
+    "vue-nav-ui": "^1.0.5",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
